@@ -4,6 +4,23 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+#background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+}
+.container h1 {
+  color: white;
+}
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -29,13 +46,13 @@ a.active {
   outline: none;
 }
 a {
-  color: #fed136;
+  color: #822288;
 }
 a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #fec503;
+  color: black;
 }
 h1,
 h2,
@@ -50,6 +67,9 @@ h6 {
 .img-centered {
   margin: 0 auto;
 }
+.bg-medium-gray {
+  background-color: #eeeeee;
+}
 .bg-light-gray {
   background-color: #f7f7f7;
 }
@@ -58,8 +78,8 @@ h6 {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #692692;
+  border-color: #ffffff;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -70,8 +90,8 @@ h6 {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #fec503;
-  border-color: #f6bf01;
+  background-color: #222222;
+  border-color: white;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -100,10 +120,11 @@ fieldset[disabled] .btn-primary.active {
   color: #fed136;
   background-color: #ffffff;
 }
+/* Botão Rectangular Normal State */
 .btn-xl {
   color: #ffffff;
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #822288;
+  border-color: white;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -111,14 +132,15 @@ fieldset[disabled] .btn-primary.active {
   font-size: 18px;
   padding: 20px 40px;
 }
+/* Botão Rectangular Actions */
 .btn-xl:hover,
 .btn-xl:focus,
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
   color: #ffffff;
-  background-color: #fec503;
-  border-color: #f6bf01;
+  background-color: black;
+  border-color: white;
 }
 .btn-xl:active,
 .btn-xl.active,
@@ -152,50 +174,59 @@ fieldset[disabled] .btn-xl.active {
   border-color: transparent;
 }
 .navbar-default .navbar-brand {
-  color: #fed136;
+  color: #822288;
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-  color: #fec503;
+  color: #ffffff;
 }
 .navbar-default .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
 }
+
+/*! Menu Pequeno NavBar */
 .navbar-default .navbar-toggle {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #822288;
+  border-color: #000000;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #fed136;
+  background-color: #000000;
 }
+/* Cor das letras do menu quando não estão selecionadas*/
 .navbar-default .nav li a {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1px;
-  color: white;
+  color: #822288;
 }
+
+/*! Cores Roll Over menu */
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
-  color: #fed136;
+  color: #666666;
   outline: none;
 }
+
+/*! Cor Botões quando na Secção */
 .navbar-default .navbar-nav > .active > a {
   border-radius: 0;
   color: white;
-  background-color: #fed136;
+  background-color: #822288;
 }
+
+/*! Cor dos botões da NavBar quando a página está na respectiva seccção*/
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: white;
-  background-color: #fec503;
+  background-color: #822288;
 }
 @media (min-width: 768px) {
   .navbar-default {
@@ -284,16 +315,17 @@ section h2.section-heading {
   margin-bottom: 15px;
 }
 section h3.section-subheading {
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
+  line-height: 30px;
   font-style: italic;
   font-weight: 400;
   margin-bottom: 75px;
 }
 @media (min-width: 768px) {
   section {
-    padding: 150px 0;
+    padding: 100px 0;
   }
 }
 .service-heading {
@@ -412,6 +444,7 @@ section h3.section-subheading {
   left: -14px;
   right: auto;
 }
+/* elementos editáveis do timeline - bolas com cores */
 .timeline > li .timeline-image {
   left: 0;
   margin-left: 0;
@@ -419,7 +452,7 @@ section h3.section-subheading {
   height: 80px;
   position: absolute;
   z-index: 100;
-  background-color: #fed136;
+  background-color: #822288;
   color: white;
   border-radius: 100%;
   border: 7px solid #f1f1f1;
@@ -456,6 +489,13 @@ section h3.section-subheading {
 }
 .timeline .timeline-heading h4.subheading {
   text-transform: none;
+
+/* tipo de letra corpo timeline */
+}
+.timeline .timeline-body-big > p,
+.timeline .timeline-body-big > ul {
+  font-size: 16px;
+  line-height: 24px;
 }
 .timeline .timeline-body > p,
 .timeline .timeline-body > ul {
@@ -551,11 +591,14 @@ section h3.section-subheading {
 aside.clients img {
   margin: 50px auto;
 }
+/* Fundo Mapa Contactos */
 section#contact {
   background-color: #222222;
   background-image: url('../img/map-image.png');
   background-position: center;
   background-repeat: no-repeat;
+  padding-top: 340px;
+  padding-bottom: 80px;
 }
 section#contact .section-heading {
   color: white;
@@ -610,11 +653,15 @@ footer {
   padding: 25px 0;
   text-align: center;
 }
+
+/*! -------------------TEXTO COPYRIGHT NO FOOTER ----------------  */
 footer span.copyright {
   line-height: 40px;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-transform: none;
+/*! Adicionar cor ao texto */
+  color: #822288;
 }
 footer ul.quicklinks {
   margin-bottom: 0;
@@ -623,12 +670,14 @@ footer ul.quicklinks {
   text-transform: uppercase;
   text-transform: none;
 }
+
+/*! -------------------BOTÕES REDES SOCIAIS ----------------  */
 ul.social-buttons {
   margin-bottom: 0;
 }
 ul.social-buttons li a {
   display: block;
-  background-color: #222222;
+  background-color: #822288;
   height: 40px;
   width: 40px;
   border-radius: 100%;
@@ -643,7 +692,7 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-  background-color: #fed136;
+  background-color: black;
 }
 .btn:focus,
 .btn:active,
